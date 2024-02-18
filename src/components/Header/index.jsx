@@ -1,9 +1,9 @@
 import icon from '../../assets/icon.jpeg';
 
 export const Header = () => {
-
   return (
-    <div className="flex justify-between items-center text-2xl">
+    <div className='fixed top-0 flex ablsoute flex-row'>
+      <div className="flex items-center gap-36 text-2xl">
       <div>
         <img className='w-16 h-16 shadow-md' src={icon}  alt="icone aqui" />
       </div>
@@ -28,6 +28,7 @@ export const Header = () => {
           </ul>
         </nav>
       </div>
+    </div>
     </div>
   );
 };
