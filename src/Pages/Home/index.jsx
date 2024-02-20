@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Layout } from "../Layout";
 import myPhoto from "../../assets/my-photo.jpg";
 
 export const Home = () => {
@@ -25,34 +24,34 @@ export const Home = () => {
   };
 
   return (
-    <Layout>
-      <div className="flex h-screen items-center justify-center relative">
+      <div className="flex h-screen items-center justify-center ">
         <motion.div
-          className="flex flex-col items-start space-y-4" // Definindo largura como metade do contêiner
+          className="flex flex-col items-start space-y-4"
           initial="initial"
           animate="animate"
           variants={containerVariants}
         >
           <motion.h1
             variants={nameVariants}
-            className="text-8xl font-bold text-slate-50 -mt-[250px]"
+            className="text-8xl font-bold text-slate-50"
           >
             Francisco Montalvao
           </motion.h1>
           <motion.p
             variants={textVariants}
-            className="text-lg text-slate-50 mb-12"
+            className="text-lg text-slate-50"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </motion.p>
-          <motion.img
+         <div className="w-full flex justify-end">
+         <motion.img
             src={myPhoto}
             alt="Sua Foto"
-            className="w-1/4 absolute right-0 bottom-30 rounded-full shadow-md mt-14 mb-2"
+            className="w-1/4 bottom-30 rounded-full shadow-md"
             variants={photoVariants}
           />
+         </div>
         </motion.div>
       </div>
-    </Layout>
   );
 };
